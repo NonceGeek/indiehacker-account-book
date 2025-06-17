@@ -14,13 +14,16 @@ import { Awfext326050 } from "@react95/icons/esm/react/awfext326050"
 import { Qfecheck111 } from "@react95/icons/esm/react/Qfecheck111"
 import { CurvesAndColors100 } from "@react95/icons/esm/react/CurvesAndColors100"
 import { Defrag } from "@react95/icons/esm/react/Defrag"
+import { Defrag4 } from "@react95/icons/esm/react/Defrag4"
 import { Joy102 } from "@react95/icons/esm/react/Joy102"
+import { Ccapi106 } from "@react95/icons/esm/react/ccapi106"
 
 import Loading from "components/Loading"
 import TaskList from "components/TaskList"
 
 import * as S from "./styled"
 import StyleBase from "../../styles/global"
+import ReactMarkdown from 'react-markdown'
 
 const { icons } = Tree;
 
@@ -29,22 +32,44 @@ const treeNodes = {
   data: [
     {
       id: 0,
-      label: 'Hackathon Prize from The Graph: $800',
-      // TODO: make the icon random from the list of icons.
-      // TODO: add the link to the income source.
+      label: <ReactMarkdown>Hackathon Prize from The Graph: $800</ReactMarkdown>,
       icon: <Joy102 variant="16x16_4" />,
     },
     {
       id: 1,
-      label: 'The Income from IndieHackers Accelerator R1: $350',
-      // TODO: make the icon random from the list of icons.
+      label: <ReactMarkdown>The Income from IndieHackers Accelerator R1: $350</ReactMarkdown>,
       icon: <Defrag variant="16x16_4" />,
     },
     {
       id: 2,
-      label: 'Scroll Airdrop: $1950',
-      // TODO: make the icon random from the list of icons.
+      label: <ReactMarkdown>Scroll Airdrop: $1950</ReactMarkdown>,
       icon: <CurvesAndColors100 variant="16x16_4" />,
+    },
+    {
+      id: 3,
+      label: <ReactMarkdown>BeThink Hackathon in Shanghai: $3197</ReactMarkdown>,
+      icon: <Defrag4 variant="16x16_4" />,
+    },
+    {
+      id: 4,
+      label: <ReactMarkdown>From [@seek_web3](https://x.com/seek_web3): $110</ReactMarkdown>,
+      icon: <Ccapi106 variant="16x16_4" />,
+    },
+    // TODO: change the icons.
+    {
+      id: 4,
+      label: <ReactMarkdown>From SpringX: $2500</ReactMarkdown>,
+      // icon: <Ccapi106 variant="16x16_4" />,
+    },
+    {
+      id: 4,
+      label: <ReactMarkdown>From PicWe: $1000</ReactMarkdown>,
+      // icon: <Ccapi106 variant="16x16_4" />,
+    },
+    {
+      id: 4,
+      label: <ReactMarkdown>From DeagentAI: $695</ReactMarkdown>,
+      // icon: <Ccapi106 variant="16x16_4" />,
     },
     // {
     //   id: 2,
@@ -148,7 +173,7 @@ const Layout = ({ children }) => {
           >
             <br></br>
             <h1>The account book of leeduckgo. 
-              <a href="https://x.com/0xleeduckgo" target="_blank"> 👉 View my twitter.</a>
+              <a href="https://x.com/intent/follow?screen_name=0xleeduckgo" target="_blank"> 👉 View my twitter.</a>
             </h1>
             <br></br>
             <p>The purpose of this account book is to record the income item and its type, so it could be optimized by <b>INTERATION</b>.</p>
@@ -160,11 +185,12 @@ const Layout = ({ children }) => {
             <p>* <b>Expected Income:</b> $ 10,000</p>
             <br></br>
             {/* TODO: make the process with diff colors. */}
-            <ProgressBar width="200px" percent={31} />
+            <ProgressBar width="200px" percent={107.02} />
+            {/* (800+350+100+1950+3197+110+2500+1000+695)/10000 */}
             <br></br><br></br>
             <p>
             <Qfecheck111 variant="32x32_4" alt="Income" />
-            Where do I get the income from?</p>
+            Where do I get the incomes from?</p>
             <Tree {...treeNodes} />
           </S.LayoutMain>
         )}
